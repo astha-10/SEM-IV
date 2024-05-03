@@ -1,0 +1,13 @@
+def sort_dict_by_key(d):
+    return dict(sorted(d.items()))
+
+# Example dictionary
+my_dict = {'b': 2, 'a': 1, 'c': 3}
+
+# Sort the dictionary by key
+sorted_dict = sort_dict_by_key(my_dict)
+print("Sorted dictionary by key:", sorted_dict)
+
+
+OUTPUT:
+Sorted dictionary by key: {'a': 1, 'b': 2, 'c': 3}

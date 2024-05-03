@@ -1,0 +1,17 @@
+def first_non_repeated_element(lst):
+    for i in range(len(lst)):
+        if lst.count(lst[i]) == 1:
+            return lst[i]
+    return None
+
+# Example usage
+lst = [1, 2, 3, 4, 2, 3, 4, 5]
+result = first_non_repeated_element(lst)
+if result is not None:
+    print("First non-repeated element:", result)
+else:
+    print("No non-repeated elements found in the list.")
+
+
+OUTPUT:
+First non-repeated element: 1

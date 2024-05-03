@@ -1,0 +1,23 @@
+import pandas as pd
+
+# Sample dictionary
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'Age': [25, 30, 35, 40],
+        'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']}
+
+# Create a DataFrame from the dictionary
+df = pd.DataFrame(data)
+
+# Display a summary of the basic information about the DataFrame and its data
+print(df.info())
+
+OUTPUT:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4 entries, 0 to 3
+Data columns (total 3 columns):
+Name    4 non-null object
+Age     4 non-null int64
+City    4 non-null object
+dtypes: int64(1), object(2)
+memory usage: 224.0+ bytes
+None

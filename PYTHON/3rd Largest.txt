@@ -1,0 +1,17 @@
+def third_largest_number(numbers):
+    unique_numbers = list(set(numbers))
+    if len(unique_numbers) < 3:
+        return "There are less than three unique numbers in the list."
+    unique_numbers.sort(reverse=True)
+    return unique_numbers[2]
+
+# Example usage
+numbers = [10, 20, 4, 45, 99, 45, 50, 45, 90, 100, 88]
+print("Original list of numbers:", numbers)
+print("Third largest number:", third_largest_number(numbers))
+
+
+
+OUTPUT:
+Original list of numbers: [10, 20, 4, 45, 99, 45, 50, 45, 90, 100, 88]
+Third largest number: 90

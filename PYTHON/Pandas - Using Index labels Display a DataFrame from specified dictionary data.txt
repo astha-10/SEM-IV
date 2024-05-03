@@ -1,0 +1,23 @@
+import pandas as pd
+
+# Sample dictionary
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'Age': [25, 30, 35, 40],
+        'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']}
+
+# Specify index labels
+index_labels = ['A', 'B', 'C', 'D']
+
+# Create a DataFrame from the dictionary with specified index labels
+df = pd.DataFrame(data, index=index_labels)
+
+# Display the DataFrame
+print(df)
+
+
+OUTPUT:
+      Name  Age         City
+A    Alice   25     New York
+B      Bob   30  Los Angeles
+C  Charlie   35      Chicago
+D    David   40      Houston

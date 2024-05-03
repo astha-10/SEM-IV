@@ -1,0 +1,65 @@
+a = {
+"brand": "Dior",
+"model": "Duffel Bag",
+"year": 1981
+}
+print(a)
+print(a["brand"])
+a = {
+"brand": "Dior",
+"model": "Duffel Bag",
+"year": 1999
+}
+print(a)
+print(type(a))
+dictionary = dict(name="Shawn", age=19, education="Engineering")
+print(dictionary)
+x = a.get('model')
+print(x)
+x = a.keys()
+print(x)
+a["year"] = 1991
+print(a)
+x = a.values()
+print(x)
+x = a.items()
+print(x)
+a["year"] = 1988
+print(a)
+if "model" in a:
+print("Yes, 'model' is one of the keys in the Example dictionary")
+a.update({"model": "Shoes"})
+print(a)
+a.pop("year")
+print(a)
+a = {
+"brand": "Dior",
+"model": "Duffel Bag",
+"year": 1981
+}
+a.popitem()
+print(a)
+b = a.copy()
+b.clear()
+print(b)
+for x in a:
+print(x)
+for x in a.values():
+print(x)
+for x in a.keys():
+print(x)
+for x, y in a.items():
+print(x, y)
+fam = {"1": {"name": "Bey", "year": 1993}, "2": {"name": "Titan", "year": 
+2007}, "3": {"name": "James", "year": 1919}}
+print(fam)
+print(fam["3"]["name"])
+x = ('key1', 'key2', 'key3')
+y = 0
+this_dict = dict.fromkeys(x, y)
+print(this_dict)
+print("PART FOUR")
+# Get the value of the "model" item:
+car = {"brand": "Ford", "model": "Mustang", "year": 1964}
+x = car.setdefault("color", "white")
+print(x)

@@ -1,0 +1,127 @@
+class Person: 		def 
+__init__(self, name, age): 
+ 	self.name = name 
+self.age = age 
+   	def 
+my_func(self): 
+ 	print(f"Hi! Myself, {self.name}. I am {self.age} years old.") 
+  p1 = Person("Aishani",19) 
+  p2 = Person("Ash",2) 
+
+print(p1) 
+print(p2) 
+print(p1.name) 
+print(p2.age) 
+ p1.my_func() 
+p2.my_func() 
+print("\n") 
+  class 
+Room: 
+   length = 0.0 
+breadth = 0.0 
+ def 
+calculate_area(self): 
+ print("Area of Room =", self.length * self.breadth) 
+ 
+study_room = Room() 
+study_room.length = 67.5 study_room.breadth 
+= 10.3 
+  study_room.calculate_area() 
+print("\n") 
+    class 
+Student: 
+    def __init__(self): 
+self.__roll = 0 self.__name 
+= "" self.__marks = [] 
+ self.__total = 0 
+self.__per = 0 
+self.__grade = "" 
+self.__result = "" 
+    def 
+setStudent(self): 
+     self.__roll = int(input("Enter Roll: 
+"))   self.__name = input("Enter Name: ") 
+print("Enter marks of 5 subjects: ") 
+for i in range(5): 
+    self.__marks.append(int(input("Subject " + str(i + 1) + ": "))) 
+ def 
+calculateTotal(self): 
+for x in self.__marks: 
+self.__total += x 
+ def calculatePercentage(self): 
+self.__per = self.__total / 5 
+ def 
+calculateGrade(self): 
+if self.__per >= 85: 
+self.__grade = "S" 
+elif self.__per >= 75: 
+self.__grade = "A" 
+elif self.__per >= 65: 
+self.__grade = "B" 
+elif self.__per >= 55: 
+self.__grade = "C" 
+elif self.__per >= 50: 
+self.__grade = "D" 
+else: 
+      self.__grade = "F" 
+ def 
+calculateResult(self): 
+    count = 0 for 
+x in self.__marks: 
+if x >= 50: 
+count += 1 if 
+count == 5: 
+   self.__result = "PASS" 
+elif count >= 3: 
+   self.__result = "COMP." 
+else: 
+   self.__result = "FAIL" 
+ def showStudent(self): 
+self.calculateTotal() 
+self.calculatePercentage() 
+self.calculateGrade() 
+self.calculateResult() 
+   print(self.__roll, "\t\t", self.__name, "\t\t", self.__total, 
+"\t\t", self.__per, "\t\t", self.__grade, "\t\t", 
+self.__result) 
+ def 
+main(): 
+ # Student object 
+ s = Student() 
+ s.setStudent() 
+ s.showStudent() 
+if __name__ == 
+"__main__": 
+   main() 
+
+print("\n") 
+ class 
+Employee: 
+ __id = 0 
+ __name = "" 
+ __gender = "" 
+ __city = "" 
+ __salary = 0 
+   def 
+setData(self): 
+ 	 self.__id = int(input("Enter Id:\t")) 
+self.__name = input("Enter Name:\t") 
+self.__gender = input("Enter Gender:\t") 
+self.__city = input("Enter City:\t") 
+ self.__salary = int(input("Enter Salary:\t")) 
+    def 
+showData(self): 
+print("Id\t\t:", self.__id) 
+print("Name\t:", self.__name) 
+print("Gender\t:", self.__gender) 
+print("City\t:", self.__city) 
+print("Salary\t:", self.__salary) 
+    def 
+main(): 
+ # Employee Object 
+emp = Employee() 
+emp.setData() 
+emp.showData() 
+ if __name__ == 
+"__main__": 
+ main() 

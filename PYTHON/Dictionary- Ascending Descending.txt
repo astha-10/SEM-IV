@@ -1,0 +1,16 @@
+# Sample dictionary
+my_dict = {'a': 3, 'b': 1, 'c': 2, 'd': 5, 'e': 4}
+
+# Sort dictionary by value in ascending order
+sorted_asc = dict(sorted(my_dict.items(), key=lambda x: x[1]))
+
+# Sort dictionary by value in descending order
+sorted_desc = dict(sorted(my_dict.items(), key=lambda x: x[1], reverse=True))
+
+# Print the sorted dictionaries
+print("Ascending order:", sorted_asc)
+print("Descending order:", sorted_desc)
+
+OUTPUT:
+Ascending order: {'b': 1, 'c': 2, 'a': 3, 'e': 4, 'd': 5}
+Descending order: {'d': 5, 'e': 4, 'a': 3, 'c': 2, 'b': 1}

@@ -1,0 +1,22 @@
+import pandas as pd
+
+# Sample DataFrame
+data = {'name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'age': [25, 30, 35, 40],
+        'score': [85, 90, 88, 92]}
+
+df = pd.DataFrame(data)
+
+# Select 'name' and 'score' columns
+selected_columns = df[['name', 'score']]
+
+# Display the selected columns
+print(selected_columns)
+
+
+OUTPUT:
+      name  score
+0    Alice     85
+1      Bob     90
+2  Charlie     88
+3    David     92

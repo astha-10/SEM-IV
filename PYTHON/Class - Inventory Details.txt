@@ -1,0 +1,50 @@
+class Inventory:
+    def __init__(self):
+        self.items = {}
+
+    def add_item(self, item_id, item_name, stock_count, price):
+        if item_id in self.items:
+            print(f"Item with ID {item_id} already exists.")
+        else:
+            self.items[item_id] = {
+                'item_name': item_name,
+                'stock_count': stock_count,
+                'price': price
+            }
+            print(f"Added item {item_name} with ID {item_id}.")
+
+    def update_item(self, item_id, stock_count, price):
+        if item_id in self.items:
+            self.items[item_id]['stock_count'] = stock_count
+            self.items[item_id]['price'] = price
+            print(f"Updated item with ID {item_id}.")
+        else:
+            print(f"Item with ID {item_id} does not exist.")
+
+    def check_item_details(self, item_id):
+        if item_id in self.items:
+            item_details = self.items[item_id]
+            print(f"Item ID: {item_id}, Name: {item_details['item_name']}, Stock Count: {item_details['stock_count']}, Price: ${item_details['price']}")
+        else:
+            print(f"Item with ID {item_id} does not exist.")
+
+# Example usage
+inventory = Inventory()
+inventory.add_item(1, "Chair", 10, 50)
+inventory.add_item(2, "Table", 5, 100)
+inventory.check_item_details(1)
+inventory.check_item_details(2)
+inventory.update_item(1, 8, 55)
+inventory.check_item_details(1)
+inventory.check_item_details(3)  # Item does not exist
+
+
+OUTPUT:
+Added item Chair with ID 1.
+Added item Table with ID 2.
+Item ID: 1, Name: Chair, Stock Count: 10, Price: $50
+Item ID: 2, Name: Table, Stock Count: 5, Price: $100
+Updated item with ID 1.
+Item ID: 1, Name: Chair, Stock Count: 8, Price: $55
+Item with ID 3 does not exist.
+

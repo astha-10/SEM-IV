@@ -1,0 +1,39 @@
+#Funtional Overloading:
+def add(a, b, c=0):
+    return a + b + c
+
+print(add(1, 2))
+print(add(1, 2, 3))
+
+
+#Operator Overloading
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+result = p1 + p2
+print(result.x, result.y)
+
+
+#Method Overriding:
+class Animal:
+    def speak(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+animals = [Dog(), Cat()]
+for animal in animals:
+    print(animal.speak())

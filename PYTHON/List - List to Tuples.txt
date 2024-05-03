@@ -1,0 +1,20 @@
+def tuples_to_lists(tuples_list):
+    return [list(t) for t in tuples_list]
+
+# Example usage
+tuples_list1 = [(1, 2), (2, 3), (3, 4)]
+tuples_list2 = [(1, 2), (2, 3, 5), (3, 4), (2, 3, 4, 2)]
+
+print("Original list of tuples:", tuples_list1)
+print("Convert the said list of tuples to a list of lists:", tuples_to_lists(tuples_list1))
+
+print("Original list of tuples:", tuples_list2)
+print("Convert the said list of tuples to a list of lists:", tuples_to_lists(tuples_list2))
+
+
+OUTPUT:
+Original list of tuples: [(1, 2), (2, 3), (3, 4)]
+Convert the said list of tuples to a list of lists: [[1, 2], [2, 3], [3, 4]]
+Original list of tuples: [(1, 2), (2, 3, 5), (3, 4), (2, 3, 4, 2)]
+Convert the said list of tuples to a list of lists: [[1, 2], [2, 3, 5], [3, 4], [2, 3, 4, 2]]
+

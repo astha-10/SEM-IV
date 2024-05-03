@@ -1,0 +1,18 @@
+def remove_key(d, key):
+    if key in d:
+        d.pop(key)
+    return d
+
+# Example dictionary
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+# Key to remove
+key_to_remove = 'b'
+
+# Remove the key from the dictionary
+updated_dict = remove_key(my_dict, key_to_remove)
+print("Dictionary after removing key:", updated_dict)
+
+
+OUTPUT:
+Dictionary after removing key: {'a': 1, 'c': 3}

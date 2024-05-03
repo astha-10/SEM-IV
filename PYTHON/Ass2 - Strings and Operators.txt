@@ -1,0 +1,89 @@
+#STRINGS:
+name="Aarna"
+occupation="Student"
+print(name)
+print(occupation)
+print("2 is less than 4")
+if 2<4:
+ print("2 is greater than 4")
+else:
+ print("4 is greater than 2")
+if 5<8:
+ print("5 is smaller than 8")
+ print("8 is smaller than 5")
+ 
+#This is comment
+"""
+This is also a comment
+multilined commment
+"""
+#Creating Variables and Data types
+x=3
+print(x)
+print(type(x))
+y="aarna"
+print(y)
+print(type(y))
+#Casting
+a=str(3)
+b=int(6)
+c=float(5)
+d= bool(1)
+print (a)
+print (b)
+print (c)
+print (d)
+#Unpacking a collection
+x,y,z=["orange","apple","banana"]
+print(x)
+print(y)
+print(z)
+
+
+#Operators:
+#Arthimetic Operator
+x = 5
+y = 3
+print(x + y)
+print(x - y)
+print(x * y)
+print(x % y)
+print(x ** y)
+print(x // y)
+x = 12
+y = 3
+print(x / y)
+print("")
+#Assignment Operator
+x=2
+print (x)
+x += 3
+print(x)
+x -= 3
+print(x)
+x *= 3
+print(x)
+x /= 3
+print(x)
+x %= 3
+print(x)
+x //= 3
+print(x)
+x=5
+x **= 3
+print(x)
+x >>= 3
+print(x)
+x <<= 3
+print(x)
+print("")
+#Comparision Operator
+x = 5
+y = 3
+print(x == y)
+print(x != y)
+print(x > y)
+print(x < y)
+print(x >= y)
+print(x <= y)
+print("")

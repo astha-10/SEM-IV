@@ -1,0 +1,73 @@
+# Sets
+Team = {"Messi", "Alvarez", "Enzo", "DiMaria", "Otamendi"} 
+print(Team)
+Team1 = {"Messi", "Alvarez", "Enzo", "DiMaria", "Otamendi", "Messi"} 
+print(Team1) # Does not print duplicate values
+set1 = {"Messi", "Alvarez", "Enzo", "DiMaria", "Otamendi", True, 1, False, 0, 
+8}
+print(set1) # 1 and 0 is considered as True and False respectively 
+# Set constructor
+team = set(("Messi", "Alvarez", "Enzo", "DiMaria", "Otamendi")) 
+print(team)
+# Access items in a set 
+for x in team:
+print(x) 
+print("Messi" in team) 
+# Add items and sets
+team.add("McAllister") 
+team.add("Martinez") 
+print(team)
+team1 = {"Iniesta", "Xavi", "Busquets", "Suarez", "Gavi", "Pedri", "DeJong", 
+"Lewandowski"}
+team.update(team1) 
+print(team)
+# Remove Item
+team.remove("Lewandowski") 
+print(team)
+# Discard
+print(set1) 
+set1.discard(1) 
+print(set1)
+# Pop
+Output :
+{'Enzo', 'Messi', 'Otamendi', 'DiMaria', 'Alvarez'}
+{'Enzo', 'Messi', 'Otamendi', 'DiMaria', 'Alvarez'}
+{'Enzo', True, False, 'DiMaria', 8, 'Alvarez', 'Otamendi', 'Messi'}
+{'Enzo', 'DiMaria', 'Alvarez', 'Otamendi', 'Messi'} Enzo
+DiMaria 
+Alvarez 
+Otamendi 
+Messi 
+True
+{'Enzo', 'McAllister', 'DiMaria', 'Alvarez', 'Martinez', 'Otamendi', 'Messi'}
+{'Enzo', 'Suarez', 'DeJong', 'McAllister', 'Iniesta', 'DiMaria', 'Xavi', 'Alvarez', 'Lewandowski', 
+'Pedri', 'Martinez', 'Otamendi', 'Messi', 'Busquets', 'Gavi'}
+{'Enzo', 'Suarez', 'DeJong', 'McAllister', 'Iniesta', 'DiMaria', 'Xavi', 'Alvarez', 'Pedri', 'Martinez', 
+'Otamendi', 'Messi', 'Busquets', 'Gavi'}
+{'Enzo', True, False, 'DiMaria', 8, 'Alvarez', 'Otamendi', 'Messi'}
+{'Enzo', False, 'DiMaria', 8, 'Alvarez', 'Otamendi', 'Messi'}
+{'Enzo', 'Messi', 'Otamendi', 'DiMaria', 'Alvarez'}
+print(Team1) 
+Team1.pop() 
+print(Team1)
+# Clear
+print(Team1) 
+Team1.clear() 
+print(Team1)
+# Del 
+del set1
+# Join two sets
+final = team.union(team1) 
+print(final)
+# Intersection
+x = {"apple", "banana", "cherry"}
+y = {"apple", "google", "microsoft"} 
+print(y)
+z = x.intersection(y) 
+print(z) 
+x.intersection_update(y) 
+print(x)
+s = {"apple", "banana", "cherry"}
+r = {"apple", "google", "microsoft"} 
+t = s.symmetric_difference(r) 
+print (t)

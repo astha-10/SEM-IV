@@ -1,0 +1,25 @@
+def check_element_in_tuples(element, tuples_list):
+    for tup in tuples_list:
+        if element in tup:
+            return True
+    return False
+
+# Example usage
+tuples_list = (('Red', 'White', 'Blue'), ('Green', 'Pink', 'Purple'), ('Orange', 'Yellow', 'Lime'))
+print("Original list:", tuples_list)
+
+element_to_check1 = 'White'
+print("Check if", element_to_check1, "present in said tuple of tuples!")
+print(check_element_in_tuples(element_to_check1, tuples_list))
+
+element_to_check2 = 'Olive'
+print("Check if", element_to_check2, "present in said tuple of tuples!")
+print(check_element_in_tuples(element_to_check2, tuples_list))
+
+
+OUTPUT:
+Original list: (('Red', 'White', 'Blue'), ('Green', 'Pink', 'Purple'), ('Orange', 'Yellow', 'Lime'))
+Check if White present in said tuple of tuples!
+True
+Check if Olive present in said tuple of tuples!
+False

@@ -1,0 +1,19 @@
+def factorial(n):
+    if n < 0:
+        return "Invalid input. Please enter a non-negative integer."
+    elif n == 0:
+        return 1
+    else:
+        result = 1
+        for i in range(1, n + 1):
+            result *= i
+        return result
+
+# Example usage
+n = 5
+print(f"Factorial of {n}:", factorial(n))
+
+
+
+OUTPUT:
+Factorial of 5: 120

@@ -1,0 +1,118 @@
+# 1) 
+my_dataset = { 
+ 'format': ["ODI", "Test", "T20"], 
+ 'rank': [2, 1, 3] 
+} 
+my_var = pd.DataFrame(my_dataset) 
+print(my_var) 
+
+
+# 2) Simple Pandas series from a 
+list a = [19, 22, 23] my_var = 
+pd.Series(a) print(my_var) 
+print(my_var[0]) 
+
+
+# 3) Creating own labels 
+a = [19, 22, 23] 
+my_var = pd.Series(a, index=["I", "II", "III"]) 
+print(my_var) 
+
+
+# 4) Simple Pandas series from a dictionary 
+innings = {"first": 118, "second": 109, "third": 43, "fourth": 
+133} my_var = pd.Series(innings) print(my_var) 
+
+
+# 5) Series using only a specific set of data 
+innings = {"first": 118, "second": 109, "third": 43, "fourth": 133} 
+my_var = pd.Series(innings, index=["first", "fourth"]) 
+print(my_var) 
+
+
+# 6) Creating a dataframe from two series 
+data = { 
+ "first": [118, 109], 
+ "second": [43, 133] 
+} 
+my_var = pd.DataFrame(data) 
+print(my_var) 
+
+
+# 7) Locate row 
+data = { 
+ "first": [118, 109], 
+ "second": [43, 133] 
+} 
+df = pd.DataFrame(data) 
+print(df, "\n") 
+print(df.loc[0], "\n") 
+print(df.loc[[0, 1]], "\n") 
+
+
+# 8) Named Indexes 
+data = { 
+ "first": [118, 109], 
+ "second": [43, 133] 
+} 
+df = pd.DataFrame(data, index=["A", "B"]) 
+print(df) 
+print(df.loc["A"]) 
+
+
+# 9) Load CSV file into dataframe 
+df = pd.read_csv('tips.csv') 
+print(df, "\n") 
+print("Using to_string() method:\n") 
+print(df.to_string()) 
+
+
+# 10) Checking max number of rows returned 
+print("Maximum number of rows that can be displayed : ", 
+pd.options.display.max_rows) 
+
+
+# 11) Increasing the maximum number of rows to 
+display pd.options.display.max_rows = 300 df = 
+pd.read_csv('tips.csv') print(df) 
+
+
+# 12) Reading JSON Files df = 
+pd.read_json('data.json') 
+print(df.to_string()) 
+
+
+# 13) Loading a Python dictionary into a DataFrame 
+data = { 
+ "quiz": { 
+   "sport": { 
+     "q1": { 
+       "question": "Which one is correct team name in NBA?", 
+       "options": [ 
+            "New York Bulls", 
+            "Los Angeles Kings", 
+            "Golden State Warriros", 
+"Huston Rocket" 
+                 ],       "answer": "Huston Rocket" 
+           } 
+     }, 
+     "maths": { 
+ "q1": { 
+ "question": "5 + 7 = ?", 
+ "options": [ 
+ "10", 
+"11", 
+"12", 
+"13" 
+ ], 
+ 
+"answer": "12" 
+ }, 
+ "q2": { 
+ "question": "12 - 8 = ?", 
+ "options": [ 
+ "1", 
+print(df.to_string()) 
+# 19) Replaces NULL values only in the column specified df = 
+pd.read_csv('student.csv') df.fillna({"mark": 100}, inplace=True) 
+print(df.to_string()) 

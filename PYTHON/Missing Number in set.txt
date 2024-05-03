@@ -1,0 +1,24 @@
+def find_missing_numbers(set1, set2):
+    missing_in_set1 = set2 - set1
+    missing_in_set2 = set1 - set2
+    return missing_in_set1, missing_in_set2
+
+# Example usage
+set1 = {1, 2, 3, 4, 5}
+set2 = {2, 3, 4, 6, 7}
+
+missing_in_set1, missing_in_set2 = find_missing_numbers(set1, set2)
+
+print("Original sets:")
+print("Set 1:", set1)
+print("Set 2:", set2)
+print("Missing numbers in Set 1 compared to Set 2:", missing_in_set1)
+print("Missing numbers in Set 2 compared to Set 1:", missing_in_set2)
+
+
+OUTPUT:
+Original sets:
+Set 1: {1, 2, 3, 4, 5}
+Set 2: {2, 3, 4, 6, 7}
+Missing numbers in Set 1 compared to Set 2: {1, 5}
+Missing numbers in Set 2 compared to Set 1: {6, 7}

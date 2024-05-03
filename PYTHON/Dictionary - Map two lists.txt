@@ -1,0 +1,13 @@
+def lists_to_dict(keys, values):
+    return dict(zip(keys, values))
+
+# Example lists
+keys = ['a', 'b', 'c']
+values = [1, 2, 3]
+
+# Map the lists into a dictionary
+result = lists_to_dict(keys, values)
+print("Mapped dictionary:", result)
+
+OUTPUT:
+Mapped dictionary: {'a': 1, 'b': 2, 'c': 3}

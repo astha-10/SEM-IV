@@ -1,0 +1,64 @@
+#Variables do not need to be declared with any particular type, and can even change type after they have been set.
+x = 4 # x is of type int
+print(x)
+print(type(x))
+x = "Aarna"
+print(x)
+print(type(x))
+#Casting: specify the data type of a variable
+x = str(3)
+y = int(3)
+z = float(3)
+print(x)
+print(y)
+print(z)
+#Data Type of variable can be Known by type()
+x = 5
+y = "Aarna"
+print(type(x))
+print(type(y))
+#String variables can be declared either by using single or double quotes:
+x = "Aarna"
+y = 'Bafna'
+print(x)
+print(y)
+#Variables are case Sensistive
+a = 4
+A = "Python lab"
+print(a)
+print(A)
+#Valid variable names:
+myvar = "Aarna"
+my_var = "Naumi"
+_my_var = "Dhruvi"
+myVar = "Pratham"
+MYVAR = "Harsh"
+myvar2 = "Shourya"
+print(myvar)
+print(my_var)
+print(_my_var)
+print(myVar)
+print(myvar2)
+print(MYVAR)
+#Many Values to Multiple Variables
+#Python allows to assign values to multiple variables in one line:
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+#One Value to Multiple Variables
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+#Unpack a collection
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+#Multiple Printing at once
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)

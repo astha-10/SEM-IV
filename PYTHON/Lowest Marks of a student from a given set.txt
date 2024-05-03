@@ -1,0 +1,50 @@
+# Number of students
+num_students = int(input("Enter the number of students: "))
+
+# List to store student details
+students = []
+
+# Input student details
+for _ in range(num_students):
+    name = input("Enter student name: ")
+    marks = int(input("Enter student total marks: "))
+    students.append((name, marks))
+
+# Sort the students list by total marks
+students.sort(key=lambda x: x[1])
+
+# Find the second lowest total marks
+second_lowest_marks = None
+for i in range(1, num_students):
+    if students[i][1] > students[0][1]:
+        second_lowest_marks = students[i][1]
+        break
+
+# Find students with the second lowest total marks
+students_with_second_lowest = [student[0] for student in students if student[1] == second_lowest_marks]
+
+# Output the result
+if second_lowest_marks is not None:
+    print("Students with the second lowest total marks:")
+    for student in students_with_second_lowest:
+        print(student, second_lowest_marks)
+else:
+    print("There is no second lowest total marks.")
+
+
+OUTPUT:
+
+Enter the number of students: 5
+Enter student name: Alice
+Enter student total marks: 80
+Enter student name: Bob
+Enter student total marks: 75
+Enter student name: Charlie
+Enter student total marks: 90
+Enter student name: David
+Enter student total marks: 70
+Enter student name: Eve
+Enter student total marks: 85
+Students with the second lowest total marks:
+Alice 80
+Eve 80

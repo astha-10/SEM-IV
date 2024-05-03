@@ -1,0 +1,130 @@
+1) CREATING AN ARRAY
+import numpy as np
+# Create a 1D array
+arr1 = np.array([1, 2, 3, 4, 5])
+print("1D array:", arr1)
+# Create a 2D array
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+print("2D array:\n", arr2)
+
+
+2)ACCESS ELEMENTS:
+import numpy as np
+# Access elements of a 1D array
+print("First element of arr1:", arr1[0])
+# Access elements of a 2D array
+print("Element at row 1, column 2 of arr2:", arr2[0, 1])
+
+
+3)ARRAY SHAPE AND SIZE:
+import numpy as np
+# Get the shape of an array
+print("Shape of arr1:", arr1.shape)
+print("Shape of arr2:", arr2.shape)
+# Get the size of an array
+print("Size of arr1:", arr1.size)
+print("Size of arr2:", arr2.size)
+
+
+4)RESHAPE ARRAY
+import numpy as np
+# Reshape a 1D array into a 2D array
+arr1_reshaped = arr1.reshape(5, 1)
+print("Reshaped arr1:\n", arr1_reshaped)
+
+
+5)CONCATENATE ARRAY
+import numpy as np
+# Concatenate two arrays
+arr3 = np.array([6, 7, 8, 9, 10])
+concatenated_arr = np.concatenate((arr1, arr3))
+print("Concatenated array:", concatenated_arr)
+
+
+6)ARITHMETIC OPERATIONS
+import numpy as np
+# Perform arithmetic operations on arrays
+sum_arr = arr1 + arr3
+diff_arr = arr3 - arr1
+prod_arr = arr1 * arr3
+div_arr = arr3 / arr1
+print("Sum:", sum_arr)
+print("Difference:", diff_arr)
+print("Product:", prod_arr)
+print("Division:", div_arr)
+
+
+import numpy as np
+#1) Printing length of array
+arr = np.array([1, 2, 3, 4, 5])
+print("Length of array:", len(arr))
+
+#2) Create a 2D array
+arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+print("2D array:\n", arr_2d)
+
+#3) Create a 3D array
+arr_3d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+print("3D array:\n", arr_3d)
+
+#4) Print dimension of given array
+print("Dimension of arr_3d:", arr_3d.ndim)
+
+#5) Print sum of any 2 individual elements of a given array
+element_sum = arr_2d[0, 0] + arr_2d[1, 1]
+print("Sum of elements:", element_sum)
+
+#6) Print a particular element of the given array
+print("Element at index (1, 2) of arr_2d:", arr_2d[1, 2])
+
+#7) Print a particular element of the array with negative dimensions
+print("Element at index (-1, -1) of arr_2d:", arr_2d[-1, -1])
+
+#8) Slicing of an array
+sliced_arr = arr[:3]
+print("Sliced array:", sliced_arr)
+
+#9) Create an array of any particular datatype
+arr_dtype = np.array([1, 2, 3], dtype='float')
+print("Array with float datatype:", arr_dtype)
+
+#10) Create an array of type int
+arr_int = np.array([1, 2, 3], dtype='int')
+print("Array with int datatype:", arr_int)
+
+#11) Copy an array to another variable
+arr_copy = np.copy(arr)
+print("Copied array:", arr_copy)
+
+#12) Create a view for an array
+arr_view = arr.copy()
+print("Array view:", arr_view)
+
+#13) Creating a horizontal stack of arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+h_stack = np.hstack((arr1, arr2))
+print("Horizontal stack:", h_stack)
+
+#14) Creating a vertical stack of array
+v_stack = np.vstack((arr1, arr2))
+print("Vertical stack:\n", v_stack)
+
+#15) Horizontal splitting of an array
+h_split = np.hsplit(arr_2d, 3)
+print("Horizontal split:")
+for a in h_split:
+    print(a)
+
+#16) Vertical splitting of an array
+v_split = np.vsplit(arr_2d, 2)
+print("Vertical split:")
+for a in v_split:
+    print(a)
+
+#17) Searching for a particular element in an array
+arr_search = np.array([1, 2, 3, 4, 5])
+index = np.where(arr_search == 3)
+print("Index of element 3:", index[0])
+
+

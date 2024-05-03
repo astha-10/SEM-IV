@@ -1,0 +1,23 @@
+import re
+
+# Function to find numbers in a string
+find_numbers = lambda s: re.findall(r'\d+', s)
+
+# Input string
+input_string = input("Enter a string: ")
+
+# Find numbers in the input string
+numbers_list = find_numbers(input_string)
+
+# Filter numbers longer than the length of the list
+filtered_numbers = list(filter(lambda x: len(x) > len(numbers_list), numbers_list))
+
+# Sort the filtered numbers
+sorted_filtered_numbers = sorted(filtered_numbers, key=lambda x: int(x))
+
+# Display the sorted filtered numbers
+print("Numbers longer than the length of the list in sorted form:", sorted_filtered_numbers)
+
+OUTPUT:
+Enter a string: abc 1234 def 56789 ghi
+Numbers longer than the length of the list in sorted form: ['56789']

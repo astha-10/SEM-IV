@@ -1,0 +1,40 @@
+def triangle_type(side1, side2, side3):
+    if side1 == side2 == side3:
+        return "Equilateral"
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        return "Isosceles"
+    else:
+        return "Scalene"
+
+# Example side lengths
+side1 = 5
+side2 = 5
+side3 = 5
+
+print("Side lengths:", side1, side2, side3)
+print("Triangle type:", triangle_type(side1, side2, side3))
+
+side1 = 3
+side2 = 4
+side3 = 5
+
+print("\nSide lengths:", side1, side2, side3)
+print("Triangle type:", triangle_type(side1, side2, side3))
+
+side1 = 4
+side2 = 4
+side3 = 6
+
+print("\nSide lengths:", side1, side2, side3)
+print("Triangle type:", triangle_type(side1, side2, side3))
+
+
+OUTPUT:
+Side lengths: 5 5 5
+Triangle type: Equilateral
+
+Side lengths: 3 4 5
+Triangle type: Scalene
+
+Side lengths: 4 4 6
+Triangle type: Isosceles

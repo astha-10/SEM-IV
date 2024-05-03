@@ -1,0 +1,13 @@
+def multiply_with_unknown(x):
+    unknown_number = 5  # Example unknown number
+    return x * unknown_number
+
+# Example usage
+number = 10
+print("Number:", number)
+print("Number multiplied with unknown number:", multiply_with_unknown(number))
+
+
+OUTPUT:
+Number: 10
+Number multiplied with unknown number: 50

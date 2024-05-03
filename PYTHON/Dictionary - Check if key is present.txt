@@ -1,0 +1,15 @@
+# Sample dictionary
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+# Key to check
+key = 'b'
+
+# Check if key exists in the dictionary
+if key in my_dict:
+    print(f"The key '{key}' exists in the dictionary.")
+else:
+    print(f"The key '{key}' does not exist in the dictionary.")
+
+
+OUTPUT:
+The key 'b' exists in the dictionary.

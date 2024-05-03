@@ -1,0 +1,26 @@
+def kth_largest_element(lst, k):
+    sorted_lst = sorted(lst, reverse=True)
+    if k > 0 and k <= len(sorted_lst):
+        return sorted_lst[k - 1]
+    else:
+        return None
+
+# Take input from the user for the list
+lst = input("Enter a list of numbers separated by spaces: ").split()
+lst = [int(x) for x in lst]
+
+# Take input from the user for k
+k = int(input("Enter the value of k: "))
+
+result = kth_largest_element(lst, k)
+if result is not None:
+    print(f"{k}th largest element in the list:", result)
+else:
+    print("Invalid value of k. Please enter a value between 1 and the length of the list.")
+
+
+OUTPUT:
+Enter a list of numbers separated by spaces: 7 10 4 3 20 15
+Enter the value of k: 3
+3th largest element in the list: 15
+

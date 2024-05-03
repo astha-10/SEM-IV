@@ -1,0 +1,24 @@
+# Lambda function to add 15 to a given number
+add_15 = lambda x: x + 15
+
+# Lambda function to multiply two numbers
+multiply = lambda x, y: x * y
+
+# Take user input for a number
+number = float(input("Enter a number: "))
+print("Number:", number)
+print("Number + 15:", add_15(number))
+
+# Take user input for two numbers
+x = float(input("Enter the first number: "))
+y = float(input("Enter the second number: "))
+print("Multiplication result:", multiply(x, y))
+
+
+OUTPUT:
+Enter a number: 10
+Number: 10.0
+Number + 15: 25.0
+Enter the first number: 5
+Enter the second number: 3
+Multiplication result: 15.0

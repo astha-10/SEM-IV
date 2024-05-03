@@ -1,0 +1,11 @@
+# Sample dictionary
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+# Add a new key-value pair
+my_dict['d'] = 4
+
+# Print the updated dictionary
+print(my_dict)
+
+OUTPUT:
+{'a': 1, 'b': 2, 'c': 3, 'd': 4}

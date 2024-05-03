@@ -1,0 +1,14 @@
+def is_dict_empty(d):
+    return not bool(d)
+
+# Example dictionaries
+empty_dict = {}
+non_empty_dict = {'a': 1, 'b': 2}
+
+# Check if dictionaries are empty
+print("Is empty_dict empty?", is_dict_empty(empty_dict))
+print("Is non_empty_dict empty?", is_dict_empty(non_empty_dict))
+
+OUTPUT:
+Is empty_dict empty? True
+Is non_empty_dict empty? False

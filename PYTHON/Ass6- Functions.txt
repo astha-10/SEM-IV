@@ -1,0 +1,117 @@
+#function
+def my_function():
+print("Hello from a function")
+#function Call
+my_function()
+def my_function():
+print("Python is cool")
+#function Call
+my_function()
+def my_function(fname):
+print(fname + " is cool")
+my_function("Rushil")
+my_function("Aarna")
+my_function("Deep")
+def my_function(*kids):
+print("The youngest child is " + kids[2])
+my_function("Rohit", "Tilak", "Surya")
+The youngest child is Surya
+def my_function(**kid):
+print("His last name is " + kid["lname"])
+my_function(fname = "Rushil", lname = "Desai")
+His last name is Desai
+def my_function(country = "India"):
+print("I am from " + country)
+my_function("Sweden")
+my_function("Australia")
+my_function()
+my_function("Japan")
+I am from Sweden
+I am from Australia
+I am from India
+I am from Japan
+def my_function(food):
+for x in food:
+print(x)
+fruits = ["apple", "banana", "rasberry"]
+my_function(fruits)
+def my_function(x):
+return 5 * x
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+def my_function1(x):
+return x * x
+print(my_function1(3))
+print(my_function1(5))
+print(my_function1(9))
+x = lambda a : a + 10
+print(x(5))
+x = lambda a, b : a * b
+print(x(5, 6))
+for i in range(10):
+# function call
+result = get_square(i)
+print('Square of',i, '=',result)
+while index > 0:
+rstr1 += str1[index - 1]
+index = index - 1
+return rstr1
+print(string_reverse('rushil'))
+def factorial(n):
+if n == 0:
+return 1
+else:
+return n * factorial(n - 1)
+n = int(input("Enter number: "))
+print(factorial(n))
+def test_prime(n):
+if (n == 1):
+return False
+elif (n == 2):
+return True
+else:
+for x in range(2, n):
+if (n % x == 0):
+return False
+return True
+print(test_prime(9))
+
+
+Output:
+Hello from a function
+Python is cool
+Ruhsil
+Aarna 
+Deep
+The youngest child is Surya
+His last name is Joshi
+I am from Sweden
+I am from Australia
+I am from India
+I am from Japan
+apple
+banana
+rasberry
+15
+25
+45
+9
+25
+81
+15
+30
+Square of 0 = 0
+Square of 1 = 1
+Square of 2 = 4
+Square of 3 = 9
+Square of 4 = 16
+Square of 5 = 25
+Square of 6 = 36
+Square of 7 = 49
+Square of 8 = 64
+Square of 9 = 81
+lishur
+Enter number: 5
+120
+False

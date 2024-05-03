@@ -1,0 +1,13 @@
+def sum_dict_values(d):
+    return sum(d.values())
+
+# Example dictionary
+my_dict = {'a': 10, 'b': 20, 'c': 30}
+
+# Sum of all values in the dictionary
+result = sum_dict_values(my_dict)
+print("Sum of all values in the dictionary:", result)
+
+
+OUTPUT:
+Sum of all values in the dictionary: 60

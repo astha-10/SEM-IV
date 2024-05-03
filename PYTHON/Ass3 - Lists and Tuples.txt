@@ -1,0 +1,232 @@
+#Lists
+branch = ["IT","Coms","EXTC","Chemical","AI&DS"]
+print(branch)
+print(len(branch))
+#Indexing
+print(branch[1])
+print(branch[2])
+print(branch[0])
+print(branch[4])
+#negative Indexing -1 refers to the last item
+print(branch[-1])
+print(branch[-2])
+print(branch[-4])
+print(branch[-3])
+#slicing
+print(branch[1:6])
+print(branch[:2])
+print(branch[2:])
+print(branch[-4:-1])
+list1 = ["kiwi","cranberry", "avocado"]
+list2 = [1, 5, 7, 9]
+list3 = [True, False, False]
+list4 = ["abc", 34, True, 40, "male"]
+print(list1)
+print(list2)
+print(list3)
+print(list4)
+#Check if item is present in list
+branch = ["IT","Coms","EXTC","Chemical","AI&DS"]
+if "Coms" in branch:
+ print("Yes, 'computer' is in the branch list")
+#Change item value of list
+Team = ["Ojas", "Ishan", "Surya", "Rohit", "Virat", "Dev", "Aarna", "Sanskruti"]
+print(Team)
+Team[1]= "Sarosh"
+Team[5]="Ian"
+print(Team)
+Team[1:3]=["Deep","Travis"]
+print(Team)
+Team[1:3]=["Travis"]
+print(Team)
+Team.insert(3,"Sarthak")
+print(Team)
+#Add List Item
+color = ["Teal", "Fuschia", "Red"]
+print(color)
+color.append("Pink")
+print(color)
+color.insert(2,"White")
+print(color)
+color1 = ["Blue", "Green", "Cyan", "Olive"]
+print(color1)
+color.extend(color1)
+print(color)
+#Remove Item from List
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+#Remove the first occurance of banana
+thislist = ["apple", "banana", "cherry", "strawberry", "banana"]
+thislist.remove("banana")
+print(thislist)
+#Remove the 2nd item
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+#Remove the last item
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+#Remove the first item
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+#Delete the entire list
+thislist = ["apple", "banana", "cherry"]
+del thislist
+#Clear the list content
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+#Looping through list
+#Print all items by referring to their index number
+Team = ["Ojas", "Ishan", "Surya", "Rohit", "Virat", "Dev", "Aarna", "Sanskruti"]
+for i in range(len(Team)):
+ print(Team[i])
+#Print all items, using a while loop to go through all the index numbers
+Team = ["Ojas", "Ishan", "Surya", "Rohit", "Virat", "Dev", "Aarna", "Sanskruti"]
+i = 0
+while i< len(Team):
+ print(Team[i])
+ i += 1
+#Sorting List Alphabetically
+Team = ["Ojas", "Ishan", "Surya", "Rohit", "Virat", "Dev", "Aarna", "Sanskruti"]
+Team.sort()
+print(Team)
+#Descending order
+Team = ["Ojas", "Ishan", "Surya", "Rohit", "Virat", "Dev", "Aarna", "Sanskruti"]
+Team.sort(reverse = True)
+print(Team)
+#Reverse Order of List
+Team = ["Ojas", "Ishan", "Surya", "Rohit", "Virat", "Dev", "Aarna", "Sanskruti"]
+Team.reverse()
+print(Team)
+#Copying list
+thislist = ["apple", "banana", "cherry"]
+thislist = thislist.copy()
+print(thislist)
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+students = ["Shreya", "Aarna", "Aryaa", "Sanskruti", "Aishani", "Rhea", "Siddhi", "Melvina", "Sarthak", "Hriday", "Soham"]
+location = ["Amsterdam", "Boston", "Kansas", "New York", "Pittsburg", "Ohio"]
+hobby = ["Reading", "Journalling", "Cooking", "Crocheting", "Drawing", "Guitar", "Badminton"]
+rollno = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+students.append("Pankaj")
+print(students)
+location.append("Texas")
+print(location)
+hobby.append("Shopping")
+print(hobby)
+rollno.append(15)
+print(rollno)
+students.insert(5,"Deep")
+print(students)
+location.insert(6,"Calfornia")
+print(location)
+hobby.insert(3,"Sleep")
+print(hobby)
+rollno.insert(13,16)
+print(rollno)
+students.remove("Deep")
+print(students)
+location.remove("Calfornia")
+print(location)
+hobby.remove("Sleep")
+print(hobby)
+rollno.remove(16)
+print(rollno)
+#Tuples:are written with round brackets.
+branch=("IT","AI&DS","EXTC","COMPS","CHEM")
+print(branch)
+#Tuples allow duplicate values:
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+print(branch)
+print(len(branch))
+print(type(branch))
+#One item tuple, remember the comma:
+fruit = ("apple",)
+print(type(fruit))
+#NOT a tuple
+fruits = ("apple")
+print(type(fruits))
+#Tuple can contain Different Data Types
+Example = ("abc", 34, True, 40, "male")
+print(Example)
+#Access Tuple Items
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+print(branch[0])
+print(branch[2])
+print(branch[4])
+print(branch[-6])
+print(branch[-4])
+print(branch[2:5])
+print(branch[2:])
+print(branch[:4])
+print(branch[-4:-1])
+if "IT" in branch:
+ print("Yes, 'IT' is in the branch tuple")
+ print(len(branch))
+#Convert the tuple into a list to be able to change it
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+print(branch)
+branch1 = list(branch)
+print(branch1)
+branch1[1] = "DATA SCIENCE"
+print(branch1)
+branch = tuple(branch1)
+print(branch)
+# Add Items Since tuple are immutable they dont have append()method
+#Method convert to list
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+print(branch)
+branch1 = list(branch)
+branch1.append("FORENSIC")
+branch = tuple(branch1)
+print(branch)
+# Remove Item from Tuples. This is also not Possible so we follow this method
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+print(branch)
+branch1 = list(branch)
+branch1.remove("IT")
+branch = tuple(branch1)
+print(branch)
+#Unpacking a tuple:
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green)
+print(yellow)
+print(red)
+#LOOP THROUGH TUPLES
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+for x in branch:
+ print(x)
+print("Second way to access")
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+for i in range(len(branch)):
+ print(branch[i])
+#WHILE LOOP
+branch=("IT","AI&DS","EXTC","COMPS","CHEM","EXTC","COMPS")
+i = 0
+while i < len(branch):
+ print(branch[i])
+ i = i + 1
+#JOIN TUPLES
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+print(tuple3)
+print("Other Way")
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+print(mytuple)
+#TUPLE METHOD
+#Return the number of times the value 5 appears in the tuple:
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.count(5)
+print(x)
+print("Second Method")
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.index(8)
+print(x)
