@@ -1,0 +1,81 @@
+DATA_SEG SEGMENT
+         NUM1 DB 26H
+         ONES_NUM DB 0H
+         ZEROS_NUM DB 0H
+DATA_SEG ENDS
+
+CODE_SEG SEGMENT
+	ASSUME CS:CODE_SEG, DS:DATA_SEG
+
+START:  MOV AX, DATA_SEG        ;initialise data segment
+	MOV DS , AX
+
+	MOV AL, NUM1            ;number gets moved to AL
+	MOV CX, 8H 		;set counter to 8
+
+BACK:   ROR AL,1
+	JC carry1
+	INC ZEROS_NUM
+	JMP EXIT
+
+carry1: INC ONES_NUM
+EXIT:   LOOP BACK
+	
+	MOV AH, 4CH             ;exit to DOS
+	INT 21H
+
+CODE_SEG ENDS
+END START
+
+
+
+
+
+
+
+
+
+
+Sure, I'll explain each line of the code you provided:
+
+1. `DATA_SEG SEGMENT`: This declares the start of a segment named `DATA_SEG`, where data variables will be stored.
+
+2. `NUM1 DB 26H`: This declares a byte-sized (DB) variable named `NUM1` and initializes it with the value `26H` (which is 38 in decimal).
+
+3. `ONES_NUM DB 0H`: This declares another byte-sized variable named `ONES_NUM` and initializes it with the value `0H`.
+
+4. `ZEROS_NUM DB 0H`: This declares another byte-sized variable named `ZEROS_NUM` and initializes it with the value `0H`.
+
+5. `DATA_SEG ENDS`: This declares the end of the `DATA_SEG` segment.
+
+6. `CODE_SEG SEGMENT`: This declares the start of a segment named `CODE_SEG`, where the actual code will be stored.
+
+7. `ASSUME CS:CODE_SEG, DS:DATA_SEG`: This tells the assembler to assume that the code segment (`CS`) is `CODE_SEG` and the data segment (`DS`) is `DATA_SEG`.
+
+8. `START: MOV AX, DATA_SEG`: This moves the starting address of the `DATA_SEG` segment to the `AX` register.
+
+9. `MOV DS, AX`: This moves the contents of the `AX` register (which now holds the starting address of `DATA_SEG`) to the `DS` register, effectively initializing the `DS` register to point to the `DATA_SEG` segment.
+
+10. `MOV AL, NUM1`: This moves the value of the `NUM1` variable (which is `26H` or 38) to the `AL` register.
+
+11. `MOV CX, 8H`: This initializes the `CX` register to `8H` (which is 8 in decimal), presumably to set up a loop that will iterate 8 times.
+
+12. `BACK: ROR AL, 1`: This rotates the bits of the `AL` register to the right by 1 bit.
+
+13. `JC carry1`: This jumps to the `carry1` label if the last bit rotated out of the `AL` register is 1 (i.e., if there was a carry).
+
+14. `INC ZEROS_NUM`: If there was no carry, this instruction increments the `ZEROS_NUM` variable, which is counting the number of zeros in the binary representation of `NUM1`.
+
+15. `JMP EXIT`: This jumps to the `EXIT` label, which is outside the loop, effectively exiting the loop if there was no carry.
+
+16. `carry1: INC ONES_NUM`: If there was a carry, this instruction increments the `ONES_NUM` variable, which is counting the number of ones in the binary representation of `NUM1`.
+
+17. `EXIT: LOOP BACK`: This decrements the `CX` register and jumps back to the `BACK` label as long as `CX` is not zero, effectively looping 8 times.
+
+18. `MOV AH, 4CH`: This sets up the DOS exit function.
+
+19. `INT 21H`: This generates an interrupt to call the DOS function, effectively ending the program.
+
+20. `CODE_SEG ENDS`: This declares the end of the `CODE_SEG` segment.
+
+21. `END START`: This marks the end of the program, specifying that the program execution should start at the `START` label.
